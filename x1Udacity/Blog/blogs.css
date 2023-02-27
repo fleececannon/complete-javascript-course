@@ -1,0 +1,138 @@
+.container-grid {
+  display: grid;
+  background-color: #fffff8;
+  grid-template-rows: 5.6rem 1fr 1fr 5.6rem;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'top'
+    'main'
+    'sb'
+    'bot';
+  width: 80vw;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: medium;
+  font-weight: 700;
+  color: #fffff8;
+}
+
+.navigation {
+  display: flex;
+  grid-area: top;
+  background-color: #de9d17;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-blog {
+  margin: 3px;
+  grid-area: main;
+}
+
+.sidebar {
+  min-width: 16rem;
+  grid-area: sb;
+  display: grid flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #111b32;
+}
+
+.heading {
+  font-size: larger;
+  padding: 10px;
+}
+
+.footer {
+  display: flex;
+  grid-area: bot;
+  background-color: #de9d17;
+}
+
+.logo-box {
+  display: flex;
+  width: 200px;
+  justify-content: center;
+}
+
+.logo {
+  display: flex;
+  margin: 4px;
+  height: auto;
+  width: 130%;
+}
+
+.link-card {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 10px;
+  /* width: fit-content; */
+  color: #fffff8
+}
+
+.link-card:hover{
+  background-color: #685226;
+}
+
+.card-img {
+  display: inline-block;
+  height: 60px;
+  width: 90px;
+  margin: 7px;
+}
+
+a {
+  display: inline-block;
+  margin: 7px;
+  font-size: medium;
+  font-weight: 700;
+  color: #fffff8
+}
+
+@media (min-width: 720px) {
+  .container-grid {
+    display: grid;
+    background-color: #fffff8;
+    grid-template-rows: 5.6rem 1fr 5.6rem;
+    grid-template-columns: 1fr 20rem;
+    grid-template-areas:
+      'top top top top top top top top top top top'
+      'main main main main main main main main main main sb'
+      'bot bot bot bot bot bot bot bot bot bot bot';
+    width: 80vw;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+      sans-serif;
+  }
+
+  .navigation {
+    justify-content: unset;
+  }
+
+  .logo-box {
+    justify-content: unset;
+  }
+  /* 
+
+.link-card{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin: 15px;
+  width: fit-content
+}
+
+.card-img{
+  display: inline-block;
+  height: 60px;
+  width: 90px;
+  margin: 7px;
+}
+
+a {
+  display: inline-block;
+  margin: 7px;
+  font-size: medium;
+  font-weight: 700;
+  color: #fffff8
+} */
+}
