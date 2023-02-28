@@ -1,0 +1,165 @@
+.container-grid {
+  display: grid;
+  grid-template-rows: 5.6rem 1fr 3rem 60rem 3rem;
+  grid-template-areas:
+    'nav'
+    'main'
+    'rec-header'
+    'recs'
+    'footer';
+  width: 80vw;
+  background-color: #fffff8;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: medium;
+  font-weight: 700;
+  color: #fffff8;
+}
+
+.navigation {
+  display: flex;
+  grid-area: nav;
+  background-color: #de9d17;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-box { 
+  display: flex;
+  justify-content: center;
+  width: 200px;
+}
+
+.recommendations {
+  min-width: 8rem;
+  grid-area: recs;
+  background-color: #111b32;
+  display: grid;
+  grid-template-columns: 100;
+  grid-template-rows: 25% 25% 25% 25%;
+  grid-template-areas:
+    'top-left'
+    'top-right'
+    'bottom-left'
+    'bottom-right';
+}
+
+.author{
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.author-avatar{
+  height: auto;
+  width: 60px;
+  border-radius: 50%;
+  margin-right: 10px;
+
+}
+
+.main-blog {
+  grid-area: main;
+  font-weight: 200; 
+  color: black;
+}
+
+.blog-header{
+  margin-top: 10px;
+
+}
+
+.footer {
+  display: flex;
+  grid-area: footer;
+  background-color: #de9d17;
+}
+
+.rec-list{
+  display: inline-flex;
+  justify-content: center;
+  background-color: #111b32;
+  color: #fffff8;
+  padding: 5px;
+  margin: 0px;
+  text-decoration: underline;
+}
+
+.logo {
+  display: flex;
+  margin: 4px;
+  height: auto;
+  width: 130%;
+}
+
+.link-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fffff8;
+  margin:
+}
+
+.one {
+  grid-area: top-left;
+}
+
+.two {
+  grid-area: top-right;
+}
+
+.three {
+  grid-area: bottom-left;
+}
+
+.four {
+  grid-area: bottom-right;
+}
+
+a {
+  margin: 4px;
+  color:#fffff8
+}
+
+.fa {
+  display: inline-block;
+  margin: 7px;
+  padding: 5px;
+  font-size: 30px;
+  width: 5px;
+  text-align: center;
+  text-decoration: none;
+  color: #fffff8
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+@media (min-width: 720px) {
+.container-grid {
+    grid-template-rows: 5.6rem 1fr 3rem 25rem 3rem;
+}
+
+.recommendations {
+  min-width: 8rem;
+  grid-area: recs;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 200px 200px;
+  grid-template-areas:
+    'top-left top-right'
+    'bottom-left bottom-right';
+}
+
+
+
+.navigation {
+  justify-content: unset;
+}
+
+.logo-box {
+  justify-content: unset;
+}
+}
+
+
