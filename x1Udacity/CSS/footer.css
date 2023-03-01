@@ -1,0 +1,20 @@
+.footer {
+  display: flex;
+  grid-area: footer;
+  background-color: #de9d17;
+}
+
+.fa {
+  display: inline-block;
+  margin: 7px;
+  padding: 5px;
+  font-size: 30px;
+  width: 5px;
+  text-align: center;
+  text-decoration: none;
+  color: #fffff8;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}

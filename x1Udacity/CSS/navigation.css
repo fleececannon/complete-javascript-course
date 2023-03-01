@@ -1,0 +1,30 @@
+.navigation {
+  display: flex;
+  grid-area: nav;
+  background-color: #de9d17;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-box {
+  display: flex;
+  justify-content: center;
+  width: 200px;
+}
+
+.logo {
+  display: flex;
+  margin: 4px;
+  height: auto;
+  width: 130%;
+}
+
+@media (min-width: 720px) {
+  .navigation {
+    justify-content: unset;
+  }
+
+  .logo-box {
+    justify-content: unset;
+  }
+}
