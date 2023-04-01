@@ -1,40 +1,42 @@
 .hidden {
-   display: none;
-}
-
-#weatherForm{
+    display: none;
+  }
+  
+  #weatherForm {
     display: flex;
     flex-direction: column;
     width: 300px;
-}
-
-#weatherOutput {
-   margin-top: 10px;
-   display: flex ;
-   flex-direction: row;
-   border: solid 1px black;
-   background-color: red; 
-}
-
-#image{
+  }
+  
+  #weatherOutput {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    border: solid 1px black;
+    background-color: red;
+  }
+  
+  #image {
     display: flex;
     background-color: blue;
     border: solid 1px black;
     width: 300px;
-    height: 300px;}
-
-#trip_details{
+    height: 300px;
+  }
+  
+  #trip_details {
     display: flex;
     background-color: rgb(4, 255, 0);
     border: solid 1px black;
     width: 300px;
-    height: 150px;}
-
-li {
+    height: 150px;
+  }
+  
+  li {
     list-style-type: none;
-}
-
-#saveTrip {
+  }
+  
+  #saveTrip {
     background-color: #4CAF50;
     border: none;
     color: white;
@@ -47,9 +49,8 @@ li {
     cursor: pointer;
     border-radius: 4px;
     transition-duration: 0.4s;
-}
-
-#saveTrip:hover {
-    background-color: #45a049;
-}
-
+  
+    &:hover {
+      background-color: #45a049;
+    }
+  }

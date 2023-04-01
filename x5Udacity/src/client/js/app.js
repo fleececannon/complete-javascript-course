@@ -1,3 +1,5 @@
+export async function handleSubmit(event) {
+
 const inputLocation = document.querySelector('#location');
 const inputDate = document.querySelector('#date');
 const buttonSubmit = document.querySelector('#submit');
@@ -11,8 +13,6 @@ const outputPrecip = document.querySelector('#precip');
 const outputCity = document.querySelector('#city');
 const outputDays = document.querySelector('#remaining');
 
-
-buttonSubmit.addEventListener('click', async function (event) {
     event.preventDefault(); // Add this line to prevent form submission and page reload
     console.log("1. ::: Form Submitted :::");
     console.log("2. Location:", inputLocation.value)
@@ -26,7 +26,7 @@ buttonSubmit.addEventListener('click', async function (event) {
 
     updateUI(weatherData, pictureLink, daysRemaining, inputLocation.value);
 
-});
+
 
 const getWeather = async function (city, date, daysRemaining) {
     const res = await fetch(`http://localhost:8000/weather?city=${city}&date=${date}&daysremaining=${daysRemaining}`);
@@ -77,3 +77,5 @@ function daysUntil(inputDateString) {
 
         
   }
+
+};
