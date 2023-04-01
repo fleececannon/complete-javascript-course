@@ -4,27 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Forecast</title>
-    <style>
-        #weatherOutput {
-            margin-top: 20px;
-            border: 1px solid #ccc;
-            padding: 10px;
-            width: 300px;
-        }
-    </style>
+    <link rel="stylesheet" href="/styles/index.css">
 </head>
 <body>
-    <h1>Weather Forecast</h1>
-    <form id="weatherForm">
-        <label for="location">Location:</label>
+    <h1>Udacity Travel Planner</h1>
+    <form id="inputForm">
+        <label for="location">Enter Destination:</label>
         <input type="text" id="location" name="location" required>
         <br>
-        <label for="date">Date:</label>
+        <label for="date">Enter Date:</label>
         <input type="date" id="date" name="date" required>
         <br>
         <button type="submit" id="submit">Get Weather Forecast</button>
     </form>
-    <div id="weatherOutput"></div>
+    <div id="outputSection" class="hidden">
+        <div id="header"> </div>
+        <div id="trip_details">
+            <ul>
+                <li id="introduction"></li>
+                <li id="high"></li>
+                <li id="low"></li>
+                <li id="precip"></li>
+            </ul>
+        </div>
+        <div id="imageBox">
+            <img id="image" src="" alt="City Image">
+        </div>
+        
+    </div>
+
     <script type="module" src="/js/app.js"></script>
 </body>
 </html>
