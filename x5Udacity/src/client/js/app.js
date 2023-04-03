@@ -24,23 +24,39 @@ const outputDays = document.querySelector('#remaining');
     const weatherData = await getWeather(inputLocation.value, inputDate.value, daysRemaining);
     const pictureLink = await getPicture(inputLocation.value);
 
-    updateUI(weatherData, pictureLink, daysRemaining, inputLocation.value);
+    // updateUI(weatherData, pictureLink, daysRemaining, inputLocation.value);
 
 
+    console.log(pictureLink['url']);
+    console.log(weatherData);
+    //unhide output section and hide input section
+    outputSection.classList.remove('hidden');
+    inputForm.classList.add('hidden');
 
-const getWeather = async function (city, date, daysRemaining) {
+    //add image
+    image.src = pictureLink['url'];
+
+    //add weather data
+    outputIntro.innerHTML = `Your trip to ${inputLocation.value} is in ${daysRemaining} days`;
+    outputHigh.innerHTML = `High: ${weatherData['max_temp']}°C`;
+    outputLow.innerHTML = `Low: ${weatherData['min_temp']}°C`;
+    outputPrecip.innerHTML = `Precipitation: ${weatherData['precip']}mm`;
+
+};
+
+export const getWeather = async function (city, date, daysRemaining) {
     const res = await fetch(`http://localhost:8000/weather?city=${city}&date=${date}&daysremaining=${daysRemaining}`);
     const data = await res.json();
     return data
 }
 
-const getPicture = async function (city) {
+export const getPicture = async function (city) {
     const res = await fetch(`http://localhost:8000/picture?city=${city}`);
     const link = await res.json();
     return link
 }
 
-function daysUntil(inputDateString) {
+export function daysUntil(inputDateString) {
     // Parse the input date string in MM/DD/YYYY format
     const [year, month, day] = inputDateString.split('-');
     const inputDate = new Date(year, month - 1, day);
@@ -58,24 +74,8 @@ function daysUntil(inputDateString) {
     return differenceInDays;
   }
 
-  function updateUI (weatherData, imageLink, daysRemaining, city) {
-        console.log(imageLink['url']);
-        console.log(weatherData);
-        //unhide output section and hide input section
-        outputSection.classList.remove('hidden');
-        inputForm.classList.add('hidden');
+//   function updateUI (weatherData, imageLink, daysRemaining, city) {
 
-        //add image
-        image.src = imageLink['url'];
+       
+//   }
 
-        //add weather data
-        outputIntro.innerHTML = `Your trip to ${city} is in ${daysRemaining} days`;
-
-        outputHigh.innerHTML = `High: ${weatherData['max_temp']}°C`;
-        outputLow.innerHTML = `Low: ${weatherData['min_temp']}°C`;
-        outputPrecip.innerHTML = `Precipitation: ${weatherData['precip']}mm`;
-
-        
-  }
-
-};

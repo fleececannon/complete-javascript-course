@@ -1,56 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
+h1 {
+  color: #222;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 400px;
+}
+
+label {
+  font-size: 18px;
+  color: #333;
+}
+
+input[type='text'],
+input[type='date'] {
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+
+  &:focus {
+    border-color: #1e88e5;
+  }
+}
+
+button {
+  background-color: #1e88e5;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in;
+
+  &:hover {
+    background-color: #0d47a1;
+  }
+}
+
+#outputSection {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+#trip_details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+#trip_details li {
+  font-size: 18px;
+  color: #333;
+  list-style-type: none;
+}
+
+#trip_details #forecast {
+  font-weight: bold;
+}
+
+#imageBox {
+  position: relative;
+  width: 100%;
+  padding-top: 75%;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+}
+
+#image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .hidden {
-    display: none;
-  }
-  
-  #weatherForm {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-  }
-  
-  #weatherOutput {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: row;
-    border: solid 1px black;
-    background-color: red;
-  }
-  
-  #image {
-    display: flex;
-    background-color: blue;
-    border: solid 1px black;
-    width: 300px;
-    height: 300px;
-  }
-  
-  #trip_details {
-    display: flex;
-    background-color: rgb(4, 255, 0);
-    border: solid 1px black;
-    width: 300px;
-    height: 150px;
-  }
-  
-  li {
-    list-style-type: none;
-  }
-  
-  #saveTrip {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 10px 2px;
-    cursor: pointer;
-    border-radius: 4px;
-    transition-duration: 0.4s;
-  
-    &:hover {
-      background-color: #45a049;
-    }
-  }
+  display: none !important;
+}
+
+#outputSection:not(.hidden) {
+  display: flex;
+  // Other #outputSection styles
+}

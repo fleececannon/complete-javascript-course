@@ -1,9 +1,7 @@
 import { handleSubmit } from './js/app';
-// import { handleSubmit } from './js/formHandler';
+import { getWeather } from './js/app';
 // import { isURL } from './js/isURL';
 
 import './styles/index.scss';
 
-export { handleSubmit};
-
-alert("I EXIST");
+export { handleSubmit, getWeather};

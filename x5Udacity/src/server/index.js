@@ -8,7 +8,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
-app.use(express.static(path.join(__dirname, '..', 'client')));
+app.use(express.static('dist'));
 
 //Global Variables
 let tripDate = "";
@@ -168,3 +168,5 @@ const getPicAPI = async (city) => {
     console.log(err);
   }
 };
+
+module.exports = app;
